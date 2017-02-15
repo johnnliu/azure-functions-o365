@@ -1,0 +1,147 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Sample-Azure-Functions (this appears as name of connection/datasource)"
+  },
+  "host": "your-azure-functions.azurewebsites.net",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/Function1-your-function-here": { 
+      "post": {
+        "description": "Calls my azure function over https",
+        "operationId": "Function1", 
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "description": "code",
+            "default": "xc07xxxxxxxxxxxxxxxxx-your-default-code-to-run", 
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body", 
+            "description": "this parameter is a JSON body - see Args1 definition below",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Args1" 
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response - if return JSON define schema $ref below",
+            "schema": {
+              "title": "The response of the api.", 
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Function2": {
+      "post": {
+        "description": "Calls my azure function over https",
+         "operationId": "Function2", 
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "description": "code",
+            "default": "1Ygc620OY6CwfxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxQWtTEIiOg==",
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "request parameters - a different json parameter Args2 ",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Args2" 
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "title": "The response of the api.",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Function3": {
+      "post": {
+        "description": "Calls my azure function over https",
+        "operationId": "Function3",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "description": "code",
+            "default": "uUe/PaoBJbYEcxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk1juIQXrQ==",
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "request parameters - use the same Args1 as Function1 ",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Args1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "title": "The response of the api.",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Args1": {
+        "type": "object",
+        "required": [
+          "property1"
+        ],
+        "properties": {
+          "property1": {
+            "type": "string",
+            "example": "https://example.com/ this example text appears in various tools"
+          }
+        }
+      },
+      "Args2": {
+        "type": "object",
+        "required": [
+          "property2"
+        ],
+        "properties": {
+          "property2": {
+            "type": "string",
+            "example": "John Liu"
+          }
+        }
+      }
+    }
+  }
+}
