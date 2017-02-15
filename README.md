@@ -6,6 +6,8 @@ msgraph-create-group.ps1 | this function uses basic Invoke-WebRequest with clien
 sharepoint-create-site.ps1 | this function uses PnP-PowerShell to create SharePoint sites and provision them with template.
 sharepoint-library-checkin.ps1 | this function uses PnP-PowerShell to find checkedout files in a library and check them all in
 sharepoint-search.js | this function uses adal-node with clientid/clientcertificate to acquire app-only permission to SharePoint Online.
+---      | ---
+sample-swagger.json | this is a sample swagger.json file that you can use to see how to build one for yourself.  Swagger file is important for PowerApps and Flow to integrate well with Functions.
 
 # What about delegate permission
 
