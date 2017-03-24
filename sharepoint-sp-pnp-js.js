@@ -3,6 +3,8 @@
     > npm init -y
     > npm install sp-pnp-js node-sp-auth node-fetch --save-dev
 
+    see sharepoint-sp-pnp-js.package.json
+
     pretty much follows @mediocrebowler
     https://blogs.msdn.microsoft.com/patrickrodgers/2016/10/17/using-pnp-js-core-and-node-sp-auth/
 
