@@ -3,6 +3,7 @@
 #
 # johnliu.net/blog/2016/11/build-your-pnp-site-provisioning-with-powershell-in-azure-functions-and-run-it-from-flow
 #
+Import-Module "D:\home\site\wwwroot\modules\SharePointPnPPowerShellOnline.psd1" -Global;
 
 $requestBody = Get-Content $req -Raw | ConvertFrom-Json
 
